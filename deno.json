@@ -1,6 +1,6 @@
 {
   "tasks": {
     "build_npm": "deno run -A build_npm.ts",
-    "publish": "cd npm && npm publish"
+    "publish": "cd npm && npm publish --access public"
   }
 }
