@@ -1,4 +1,4 @@
-# typescript-templater
+# typescript-template-dialect
 
 A class for creating simple template dialects.
 
@@ -7,23 +7,23 @@ A class for creating simple template dialects.
 ### Browser or Deno
 
 ```js
-import Templater from "https://esm.sh/@jmcantrell/templater";
+import TemplateDialect from "https://esm.sh/@jmcantrell/template-dialect";
 ```
 
 ### Node
 
 ```bash
-npm install @jmcantrell/templater
+npm install @jmcantrell/template-dialect
 ```
 
 ```js
-import Templater from "@jmcantrell/templater";
+import TemplateDialect from "@jmcantrell/template-dialect";
 ```
 
 ### Example
 
 ```js
-const dialect = new Templater("${", "}");
+const dialect = new TemplateDialect("${", "}");
 const greeting = dialect.compile("Hello, ${name}!");
 console.log(greeting({ name: "you" })); // outputs: "Hello, you!"
 ```
@@ -34,7 +34,7 @@ For this section, `dialect` is assumed to have the following
 definition:
 
 ```js
-const dialect = new Templater("${", "}");
+const dialect = new TemplateDialect("${", "}");
 ```
 
 The dialect above will render strings containing placeholders that
@@ -97,7 +97,7 @@ console.log(greeting()); // outputs: "Hello, you!"
 ### Creating a template dialect
 
 ```js
-const dialect = new Templater(prefix, suffix);
+const dialect = new TemplateDialect(prefix, suffix);
 ```
 
 The constructor takes one argument that's expected to be an object
